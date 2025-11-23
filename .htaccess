@@ -1,0 +1,37 @@
+# Aktifkan Rewrite Engine
+RewriteEngine On
+RewriteBase /inventori/
+
+# Hilangkan akses langsung ke file sensitif
+<FilesMatch "\.(env|sql|log|ini)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Hilangkan index.php dari URL
+RewriteCond %{THE_REQUEST} /index\.php [NC]
+RewriteRule ^index\.php(.*)$ $1 [R=301,L]
+
+# Routing: login & logout langsung
+RewriteRule ^login$ login.php [L]
+RewriteRule ^logout$ logout.php [L]
+
+# ROUTE UNTUK GENERATE KODE INVENTARIS
+# /barang/kode/5 → page/barang/kode.php?id=5
+RewriteRule ^barang/kode/([0-9]+)$ pages/barang/kode.php?id=$1 [L,QSA]
+
+# Routing dinamis untuk halaman
+# contoh: /barang/tambah → index.php?page=barang/tambah
+RewriteRule ^([a-zA-Z0-9_-]+)/?$ index.php?page=$1 [L,QSA]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/?$ index.php?page=$1/$2 [L,QSA]
+
+# Format: /page/action/id → index.php?page=page/action&id=123
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([0-9]+)$ index.php?page=$1/$2&id=$3 [L,QSA]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)$ $1.php?id=$2 [L]
+
+# DETAIL BARANG: /barang/{kode}/detail
+RewriteRule ^barang/([a-zA-Z0-9_-]+)/detail$ index.php?page=barang/detail&id=$1 [L,QSA]
+
+# Default ke dashboard
+DirectoryIndex index.php

@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.app-shell {
+  max-width: 640px !important;
+  height: 100%;
+  margin: auto;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  background: white;
+}
+
+.bottom-nav {
+  width: 90% !important;
+  max-width: 380px !important;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* hide scrollbar but keep scroll functional */
+.scroll-hide {
+    -ms-overflow-style: none; /* IE + Edge */
+    scrollbar-width: none;    /* Firefox */
+}
+
+.scroll-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Android, iOS */
+}
+
+.scroll-area {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE */
+    scrollbar-gutter: stable; /* >>> solusi untuk layout geser */
+}
+
+.scroll-area::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
