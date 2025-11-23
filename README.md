@@ -40,3 +40,8 @@ composer install
 ```bash
 npm install
 ```
+
+## Lisensi
+
+
+Proyek ini menggunakan lisensi bebas (sesuai kebutuhan kamu).
