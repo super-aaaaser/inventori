@@ -1,9 +1,8 @@
-# Sistem Inventori Sekolah – PHP Native + TailwindCSS + AlpineJSgit
+# Sistem Inventori Sekolah – PHP Native + TailwindCSS + AlpineJS
 
 
 Sistem Inventori Barang Sekolah berbasis PHP Native dengan dukungan TailwindCSS, AlpineJS, dan MySQL. Proyek ini digunakan untuk mengelola data barang, ruangan, peminjaman, serta manajemen user dengan tampilan modern dan routing bersih.
 
----
 
 ## Instalasi
 
