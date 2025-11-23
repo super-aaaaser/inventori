@@ -51,7 +51,7 @@
             <!-- ITEM -->
             <div class="flex flex-col items-center gap-1 ">
                 <a href="">
-                    <div class="w-14 h-14 p-[1px] rounded-md flex items-center justify-center bg-gradient-to-r from-gray-800 to-red-500">
+                    <div class="w-14 h-14 p-[1px] rounded-md flex items-center justify-center bg-gradient-to-r from-gray-800 to-green-500">
                         <div class="w-full h-full flex items-center justify-center rounded-md bg-gray-800">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-green-500">
                                 <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
